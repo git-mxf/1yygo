@@ -2,6 +2,7 @@ import React,{Component} from "react";
 import "./index.scss";
 import "../../assets/cart/font/iconfont.css";
 
+
 class Cart extends Component {
 	constructor(props) {
 		super(props);
@@ -36,7 +37,6 @@ class Cart extends Component {
 						<div className="settlement">去结算</div>
 					</div>
 				</div>
-			</div>
 			)
 	}
 }

@@ -1,0 +1,159 @@
+#detail{
+	.top{
+		width: 100%;
+		height: 34px;
+		line-height: 34px;
+		background: #f7f7f7;
+		overflow: hidden;
+		font-size: 14px;
+		ul{
+			li{
+				width:28%;
+				float:left;
+				text-align:center;
+				position:relative;
+			}
+			li:after{
+				content: '';
+				position: absolute;
+				width: 1px;
+				height: 100%;
+				background-color: #ebebeb;
+				top: 0;
+				right:0;
+			}
+			li:last-child{
+				width:16%;
+				i{
+					display: block;
+					width: 15px;
+					height: 15px;
+					margin: 9px auto;
+					background: url("../../assets/img/set.png") no-repeat 0 -95px;
+					background-size: 35px auto;
+				}
+			}
+			.active{
+				background:#fff;
+				color:#f60;
+			}
+		}
+	}
+	.slider{
+		width: 100%;
+	    padding: 20px 0 0;
+	    text-align: center;
+	    background:#f7f7f7;
+	    border-top:1px solid #ebebeb;
+		img{
+			width:200px;
+			margin:0 auto;
+		}
+	}
+	.pro_info{
+	    padding: 10px 15px;
+	    background: #fff;
+	    overflow:hidden;
+		h2{
+			font-weight:normal;
+			font-size:16px;
+			line-height:20px;
+		    word-break: break-all;
+		    span{
+		    	color:#e80000;
+		    }
+		}
+		.price{
+			display: block;
+			padding: 8px 0 1px;
+			color:#999;
+		}
+		.u-progress{
+			margin-top:7px;
+			height: 6px;
+			background: #e7e7e7;
+			position: relative;
+			border-radius: 3px;
+			overflow: hidden;
+
+			.pgbar{
+				display:block;
+				width:60%;
+				height:6px;
+				background:#f60;
+				border-radius: 3px;
+			}
+		}
+		.Pro-bar-li{
+			color:#ccc;
+			li{
+				float:left;
+				overflow:hidden;
+				em{
+					display:block;
+				}
+			}
+			.P-bar01{
+				width:30%;
+				text-align:left;
+				em{
+					color:#f60;
+				}
+			}
+			.P-bar02{
+				width:40%;
+				text-align:center;
+				em{
+					color:#999;
+				}
+			}
+			.P-bar03{
+				width:30%;
+				text-align:right;
+				em{
+					color:#2af;
+				}
+			}
+		}
+	}
+	.line{
+		height:15px;
+		width:100%;
+		background:#f7f7f7;
+		border-top:1px solid #dedede;
+		border-bottom:1px solid #dedede;
+	}
+	.ann_btn{
+		width: 100%;
+	    margin-bottom: 77px;
+	    font-size: 16px;
+	    background: #fff;
+	    overflow:hidden;
+	    position:relative;
+	    a{
+	    	display: block;
+    	    padding: 0 10px;
+    	    height: 42px;
+    	    line-height: 42px;
+    	    color: #666;
+    	    border-bottom:1px solid #dedede;
+    	    position:relative;
+    	    span{
+    	    	color:#bbb;
+    	    	font-size:10px;
+    	    	margin-left:5px;
+    	    }
+    	    .fr{
+    	    	width: 7px;
+	    	    height: 13px;
+	    	    display: block;
+	    	    position: absolute;
+	    	    top: 15px;
+	    	    background: url("../../assets/img/set.png") no-repeat 0 -182px;
+	    	    background-size: 35px auto;
+	    	    right:10px;
+    	    }
+	    }
+	    
+	}
+}
