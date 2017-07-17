@@ -13,7 +13,7 @@ class Goodslist extends Component {
 				Goodslist
 	 
 		</div>
-			)
+	       		)
 	}
 }
 
