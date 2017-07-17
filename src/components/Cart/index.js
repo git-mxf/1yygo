@@ -37,6 +37,7 @@ class Cart extends Component {
 						<div className="settlement">去结算</div>
 					</div>
 				</div>
+			</div>
 			)
 	}
 }
