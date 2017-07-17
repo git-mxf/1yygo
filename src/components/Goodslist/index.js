@@ -11,7 +11,8 @@ class Goodslist extends Component {
 		return (
 			<div>
 				Goodslist
-			</div>
+	 
+		</div>
 			)
 	}
 }
