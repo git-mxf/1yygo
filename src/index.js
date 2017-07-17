@@ -6,6 +6,7 @@ import New from "./components/New/index.js";
 import Shai from "./components/Shai/index.js";
 import Cart from "./components/Cart/index.js";
 import MyCloud from "./components/MyCloud/index.js";
+import Goodslist from "./components/Goodslist/index.js";
 import {
 	HashRouter as Router,
 	Switch,
@@ -23,6 +24,7 @@ ReactDOM.render(
 				<Route path="/Shai" component={Shai} />
 				<Route path="/Cart" component={Cart} />
 				<Route path="/MyCloud" component={MyCloud} />
+				<Route path="/Goodslist" component={Goodslist} />
 				<Redirect from="/" to="/CloudShop" />
 			</Switch>
 		</App>

@@ -1,5 +1,6 @@
 import React,{Component} from "react";
 import "./index.scss"
+import ReactSwipe from "react-swipe";
 
 class CloudShop extends Component {
 	constructor(props) {
@@ -10,7 +11,7 @@ class CloudShop extends Component {
 	render(){
 		return (
 			<div>
-				CloudShop
+				
 			</div>
 			)
 	}
