@@ -1,0 +1,133 @@
+#all{
+	width:100%;
+	height:100%;
+	background:#f7f7f7;
+
+	 .shopping{
+	 	height:100%;
+	 	background:#f7f7f7;
+
+	 	.goods1{
+	 		height:55px;
+	 		padding:15px 10px;
+	 		background:#fff;
+
+	 		.picture{
+	 			float:left;
+	 			width:62px;
+	 			height:62px;
+
+
+	 			.pingan{
+	 				width:50px;
+	 				height:50px;
+	 				padding: 5px;
+	 				display: block;
+				    border: 1px solid #e5e5e5;
+				    border-radius: 3px;
+				    position: relative;
+				    overflow: hidden;
+	 			}
+	 		.presentation{
+	 			float:right;
+	 			margin-left:70px;
+   				position: relative;
+    			min-height:62px;
+
+
+    			.update{
+    				display: block;
+				    height: 18px;
+				    line-height: 18px;
+				    overflow: hidden;
+				    font-size: 16px;
+				    color: #666;
+				    
+    				}
+	 			}
+	 		}
+
+	 	}
+			
+	}
+	.payfor{
+		    width: 100%;
+		    font-size: 14px;
+		    position: fixed;
+		    display: inline-block;
+    		z-index: 12;
+    		bottom:0px;
+    		background:#fff;
+
+    		.ques{
+    			width:100%;
+    			height:36px;
+    			line-height:36px;
+    			border-bottom:1px solid #efefef;
+
+    			.chinese{
+    				line-height:34px;
+    				display:inline-block;
+    				height:36px;
+    			}
+
+    			.yes{
+    				color:#f60;
+    				font-size:25px;
+    				margin-left:10px;
+    				margin-right:5px;
+    				line-height:36px;
+
+    			}
+    			.questions{
+    				float:right;
+    				margin-right:10px;
+    			}
+    		}
+    		.last{
+    			border-bottom:1px solid #efefef;
+    			padding: 4px 10px;
+			    box-sizing: border-box;
+			    width:100%;
+			    float: left;
+			    background: #fff;
+			    height:46px;
+
+			    .total{
+			    	float:left;
+			    	
+
+			    	.one{
+			    		line-height: 20px;
+			    		width:200px;
+			    		height:20px;
+			    		font-size:12px;
+
+			    		.yuan{
+			    			color:#f60;
+			    			font-size:16px;
+			    		}
+			    	}
+
+			    	.sum{
+			    		line-height:20px;
+			    		width:200px;
+			    		height:20px;
+			    		font-size:12px;
+			    	}
+			    }
+
+			    .settlement{
+			    	float:right;
+			    	background:#f60;
+			    	width:102px;
+			    	height: 38px;
+    				line-height: 38px;
+    				border-radius: 5px;
+    				color:#fff;
+    				text-align: center;
+    				margin-right: -1px;
+			    }
+    		}
+	   }
+}
