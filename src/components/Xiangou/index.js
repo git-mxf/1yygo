@@ -1,8 +1,7 @@
 import React,{Component} from "react";
 import "./index.scss"
 
-
-class Cart extends Component {
+class Xiangou extends Component {
 	constructor(props) {
 		super(props);
 		
@@ -11,10 +10,10 @@ class Cart extends Component {
 	render(){
 		return (
 			<div>
-				
+				Xiangou
 			</div>
 			)
 	}
 }
 
-export default Cart
+export default Xiangou

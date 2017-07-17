@@ -2,7 +2,7 @@
 	重置默认样式
  */
 
-body,html,div,h1,h2,h3,h4,h5,h6,ul,ol,dl,dt,dd,img,input,figure,figcaption{
+body,html,div,h1,h2,h3,h4,h5,h6,ul,ol,dl,dt,p,dd,img,input,figure,figcaption{
 	margin:0;
 	padding:0;
 }
@@ -24,7 +24,9 @@ a{
 input{
 	outline:none;
 }
-
+i,em{
+	font-style:normal;
+}
 
 
 
