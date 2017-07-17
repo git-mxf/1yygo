@@ -11,6 +11,6 @@ window.onload=function(){
                     two.style.display='none';
                 }
         }
-};
+}; 
 
 

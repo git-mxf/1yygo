@@ -11,7 +11,7 @@ class New extends Component {
 			currentIndex: 0
 		}
 	}
-
+ 
 
 	render(){
 		return (

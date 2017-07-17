@@ -97,7 +97,7 @@ class Shai extends Component {
 					</ul>
 					</div>
 					<div className="zan">
-					
+					  
 					</div>
 					<div className="tiao"></div>
 				</div>
