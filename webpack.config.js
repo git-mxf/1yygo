@@ -1,4 +1,6 @@
 var webpack =require("webpack");
+var path = require("path");
+
 
 module.exports = {
     devtool:"source-map",
@@ -6,7 +8,7 @@ module.exports = {
         index:__dirname + "/src/index.js"
     }, //已多次提及的唯一入口文件
     output: {
-        path: __dirname + "/dist", //打包后的文件存放的地方
+        path: path.resolve(__dirname,"../eleme/public/dist"), //打包后的文件存放的地方
         filename: "[name].bundle.js",//打包后输出文件的文件名
         publicPath:"/dist/"   //webpack output is served from
 
