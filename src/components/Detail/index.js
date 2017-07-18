@@ -1,6 +1,10 @@
 import React,{Component} from "react";
 import "./index.scss";
 import img from "../../assets/img/20170302175316313.jpg";
+import {
+	NavLink
+} from "react-router-dom"
+
 
 class Detail extends Component {
 	constructor(props) {
@@ -11,6 +15,15 @@ class Detail extends Component {
 	render(){
 		return (
 			<div id="detail">
+				<header>
+					<div className="left" onClick={()=>{
+									this.props.history.push(`/CloudShop`)
+								}}>
+			
+					</div>
+					<div className="center">商品详情</div>
+					<div className="right"></div>
+				</header>
 				<div className="top">
 					<ul>
 						<li className="active">第11138云</li>

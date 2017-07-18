@@ -20,7 +20,7 @@ class CloudShop extends Component {
 	}
 
 	componentDidMount() {
-		axios.get("").then(res=>{
+		axios.get("/api/home").then(res=>{
 			console.log(res.data);
 		})
 	}
@@ -28,6 +28,9 @@ class CloudShop extends Component {
 	render(){
 		return (
 			<div id="cloudshop">
+				<header>
+					<div></div>
+				</header>
 				<ReactSwipe className="carousel" swipeOptions={{continuous: true,auto: 3000}}>
 					<div>
 						<img src={images1} />
@@ -85,7 +88,9 @@ class CloudShop extends Component {
 						<li data-list='3'
 							className={this.state.currentIndex=='3'?'active':''}>价值</li>
 					</ul>
-					<div className="right">
+					<div className="right" onClick={()=>{
+						this.props.history.push(`/Search`);
+					}}>
 						<i className="iconfont icon-fangdajing"></i>
 						<span>搜索</span>
 					</div>	

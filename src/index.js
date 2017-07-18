@@ -13,8 +13,9 @@ import Xiangou from "./components/Xiangou/index.js";
 import Xiazai from "./components/Xiazai/index.js";
 import All from "./components/All/index.js";
 import Login from "./components/Login/index.js";
-import Register from "./components/Register/";
-
+import Register from "./components/Register/index.js";
+import Search from "./components/Search/index.js"
+ 
 import {
 	HashRouter as Router,
 	Switch,
@@ -30,19 +31,20 @@ ReactDOM.render(
 
 			<Route path="/Login" component={Login} />
 			<Route path="/Register" component={Register} />
+			<Route path="/Search" component={Search} />
 			<Route path="/" render={()=>
 					<App>
-							<Route path="/CloudShop" component={CloudShop} />
-							<Route path="/New" component={New} />
-							<Route path="/Shai" component={Shai} />
-							<Route path="/Cart" component={Cart} />
-							<Route path="/MyCloud" component={MyCloud} />
-							<Route path="/Goodslist" component={Goodslist} />
-							<Route path="/Chongzhi" component={Chongzhi} />
-							<Route path="/Xiangou" component={Xiangou} />
-							<Route path="/Xiazai" component={Xiazai} />
-							<Route path="/Detail/:myID" component={Detail} />
-							<Redirect from="/" to="/CloudShop" />
+						<Route path="/CloudShop" component={CloudShop} />
+						<Route path="/New" component={New} />
+						<Route path="/Shai" component={Shai} />
+						<Route path="/Cart" component={Cart} />
+						<Route path="/MyCloud" component={MyCloud} />
+						<Route path="/Goodslist" component={Goodslist} />
+						<Route path="/Chongzhi" component={Chongzhi} />
+						<Route path="/Xiangou" component={Xiangou} />
+						<Route path="/Xiazai" component={Xiazai} />
+						<Route path="/Detail/:myID" component={Detail} />
+						<Redirect from="/" to="/CloudShop" />
 					</App>
 				}/>
 
