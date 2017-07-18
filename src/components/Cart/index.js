@@ -1,6 +1,6 @@
 import React,{Component} from "react";
 import "./index.scss";
-import "../../assets/cart/font/iconfont.css";
+import "../../assets/font/iconfont.css"
 
 
 class Cart extends Component {

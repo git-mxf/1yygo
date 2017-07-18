@@ -4,7 +4,7 @@ import ReactSwipe from "react-swipe";
 import images1 from "../../assets/img/20170609151005929.jpg"
 import images2 from "../../assets/img/20170605084728556.jpg"
 import images3 from "../../assets/img/20170629175309381.jpg"
-import "../../assets/mxf-fonts1/iconfont.css"
+import "../../assets/font/iconfont.css"
 import img from "../../assets/img/20150703172947616.jpg"
 import {
 	NavLink
@@ -78,7 +78,7 @@ class CloudShop extends Component {
 							className={this.state.currentIndex=='3'?'active':''}>价值</li>
 					</ul>
 					<div className="right">
-						<i className="iconfont icon-sousuo"></i>
+						<i className="iconfont icon-fangdajing"></i>
 						<span>搜索</span>
 					</div>	
 				</div>

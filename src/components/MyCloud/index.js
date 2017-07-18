@@ -10,7 +10,7 @@ class MyCloud extends Component {
 
 	render(){
 		return (
-			<div id="box">
+			<div id="MyCloud">
 				<div className="head">
 					<img src="../src/assets/img/head.jpg" className="userface"/>
 					<div className="news">
