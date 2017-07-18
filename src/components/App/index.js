@@ -14,10 +14,7 @@ class App extends Component {
 	render(){
 		return (
 			<div id="app">
-				<header>
-					<div></div>
-				</header>
-
+			
 				<section>
 					{this.props.children}
 				</section>

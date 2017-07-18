@@ -6,6 +6,7 @@ import images2 from "../../assets/img/20170605084728556.jpg"
 import images3 from "../../assets/img/20170629175309381.jpg"
 import "../../assets/font/iconfont.css"
 import img from "../../assets/img/20150703172947616.jpg"
+import axios from "axios";
 import {
 	NavLink
 } from "react-router-dom"
@@ -13,8 +14,15 @@ class CloudShop extends Component {
 	constructor(props) {
 		super(props);
 		this.state={
-			currentIndex: 0
+			currentIndex: 0,
+			looplist:[]
 		}
+	}
+
+	componentDidMount() {
+		axios.get("").then(res=>{
+			console.log(res.data);
+		})
 	}
 
 	render(){

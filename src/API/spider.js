@@ -1,22 +1,11 @@
-var express = require("express");
-var router = express.Router();
-var https = require("https");
-
-router.get("/" , function(req,res){
-	spider(function(data){
-		res.send(data);
-	})
-})
-
-module.exports = router;
-
+var https = require('https'); 
 
 function spider(callback){
 
 	var options = {
 	  hostname: 'm.1yyg.com',
 	  port: 443,
-	  path: '/JPData?action=getGoodsPageList&sortID=0&orderFlag=10&FIdx=1&EIdx=60&isCount=1',
+	  path: '/JPData?action=getLotteryList&SortID=0&FIdx=1&EIdx=10&isCount=1&_reffer=wx&fun=jQuery19005932965519777047_1500254149373&_=1500254149374',
 	  method: 'GET'
 	};
 
@@ -37,3 +26,5 @@ function spider(callback){
 
 	req.end();
 }
+
+module.exports = spider;
