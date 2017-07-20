@@ -29,7 +29,7 @@ class Person extends Component {
 					{
 					this.state.looplist.map((item,index)=>
 						<li onClick={()=>{
-									this.props.history.push(`/detail/123`);
+									this.props.history.push(`/detail/${item.goodsID}`);
 								}} key={item.goodsID}>
 
 							<img src={(function(){

@@ -1,6 +1,8 @@
 import React,{Component} from "react";
 import "./index.scss";
 import img from "../../assets/img/20170302175316313.jpg";
+import jsonp from "./jsonp.js";
+
 import {
 	NavLink
 } from "react-router-dom"
@@ -9,6 +11,10 @@ import {
 class Detail extends Component {
 	constructor(props) {
 		super(props);
+		
+	}
+
+	componentDidMount() {
 		
 	}
 
