@@ -17,6 +17,11 @@ import Register from "./components/Register/index.js";
 import Search from "./components/Search/index.js"
 import Logout from "./components/Logout/index.js"
 import Cartin from "./components/Cartin/index.js"
+import Jijiang from "./components/Jijiang/index.js"
+import Person from "./components/Person/index.js"
+import Newshop from "./components/Newshop/index.js"
+import Value from "./components/Value/index.js"
+
  
 import {
 	HashRouter as Router,
@@ -37,7 +42,15 @@ ReactDOM.render(
 			<Route path="/Search" component={Search} />
 			<Route path="/" render={()=>
 					<App>
-						<Route path="/CloudShop" component={CloudShop} />
+						<Route path="/CloudShop" render={()=>
+							<CloudShop>
+								<Route path='/CloudShop/jijiang' component={Jijiang} />
+								<Route path='/CloudShop/person' component={Person} />
+								<Route path='/CloudShop/newshop' component={Newshop} />
+								<Route path='/CloudShop/value' component={Value} />
+								<Redirect from="/CloudShop" to="/CloudShop/jijiang" />
+							</CloudShop>
+						} />
 						<Route path="/New" component={New} />
 						<Route path="/Shai" component={Shai} />
 						<Route path="/Cart" component={Cart} />
