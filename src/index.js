@@ -15,6 +15,8 @@ import All from "./components/All/index.js";
 import Login from "./components/Login/index.js";
 import Register from "./components/Register/index.js";
 import Search from "./components/Search/index.js"
+import Logout from "./components/Logout/index.js"
+import Cartin from "./components/Cartin/index.js"
  
 import {
 	HashRouter as Router,
@@ -31,6 +33,7 @@ ReactDOM.render(
 
 			<Route path="/Login" component={Login} />
 			<Route path="/Register" component={Register} />
+			<Route path="/Logout" component={Logout} />
 			<Route path="/Search" component={Search} />
 			<Route path="/" render={()=>
 					<App>
@@ -38,6 +41,7 @@ ReactDOM.render(
 						<Route path="/New" component={New} />
 						<Route path="/Shai" component={Shai} />
 						<Route path="/Cart" component={Cart} />
+						<Route path="/Cartin" component={Cartin} />
 						<Route path="/MyCloud" component={MyCloud} />
 						<Route path="/Goodslist" component={Goodslist} />
 						<Route path="/Chongzhi" component={Chongzhi} />
