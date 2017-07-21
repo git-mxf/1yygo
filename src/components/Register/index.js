@@ -14,19 +14,13 @@ class Register extends Component {
 
 	regist(){
 			var zj=/^1[34578]\d{9}$/;
-			var mm=/^[a-zA-Z0-9]{6,}$/;
+			
 			var username=document.querySelector(".shouji").value;
-			// var tuxing=document.querySelector(".tuxing").value;
-			var denglu=document.querySelector(".denglu").value;
-			var queren=document.querySelector(".queren").value;
+			
 
 			if(username==""||zj.test(username)==false){
 			   document.querySelector(".ts1").style.display='block';
-			}else if(denglu==""||mm.test(denglu)==false){
-	 	   		document.querySelector(".ts4").style.display='block';
-	 		}else if(denglu!==queren){
-	 	   		document.querySelector(".ts5").style.display='block';
-	 		}else{
+			}else{
 	 				fetch('/index/index/regist4ajax', {
 			headers: {
 			    'Content-Type': 'application/x-www-form-urlencoded'
@@ -52,9 +46,9 @@ class Register extends Component {
 				<div id="regist">
 
 						<div id="registDiv">
-							<div className="backs"><i className="iconfont icon-zuo backzuo"></i></div>
+						<NavLink to="/login"><div className="backs"><i className="iconfont icon-zuo backzuo"></i></div></NavLink>
 					 		<div className="zhuces">注册</div>
-							<div className="homepages"><i className="iconfont icon-shouye homgsy"></i></div>
+					 		<NavLink to='/cloudshop' ><div className="homepages"><i className="iconfont icon-shouye homgsy"></i></div></NavLink>
 						</div>
 
 					<div className="all">
@@ -91,57 +85,21 @@ class Register extends Component {
 	 	}else{
 	 	    document.querySelector(".ts1").style.display='block';
 	 	    document.querySelector(".ts1").innerHTML='输入正确'
+	 	    
 	 	}
 	}
-
-	 chkvalue1() {
-	 	var mm=/^[a-zA-Z0-9]{6,}$/;
-	 	var tuxing=document.querySelector(".tuxing").value;
+	regist(){
+		var zj=/^1[34578]\d{9}$/;
+		var username=document.querySelector(".shouji").value;
+		if(username!==""&&zj.test(username)==true){
+			location.href="http://localhost:8088/?#/login"
+		}
+	}
+			
 	
-	 	if(tuxing==""||mm.test(tuxing)==false){
-	 	    document.querySelector(".ts2").style.display='block';
-	 	}else{
-	 	    document.querySelector(".ts2").style.display='block';
-	 	    document.querySelector(".ts2").innerHTML='输入正确'
-	 	}
-	}
-
-	 chkvalue2() {
-	 	var zj=/^1[0-9]{10}$/;
-	 	var yanzheng=document.querySelector(".yanzheng").value;
 
 
-	 	if(yanzheng==""||zj.test(yanzheng)==false){
-	 	   document.querySelector(".ts3").style.display='block';
-	 	}else{
-	 	    document.querySelector(".ts3").style.display='block';
-	 	    document.querySelector(".ts3").innerHTML='输入正确'
-	 	}
-	}
-
-	chkvalue3() {
-	 	var mm=/^[a-zA-Z0-9]{6,}$/;
-	 	var denglu=document.querySelector(".denglu").value;
-	 	
-	 	if(denglu==""||mm.test(denglu)==false){
-	 	   document.querySelector(".ts4").style.display='block';
-	 	}else{
-	 	    document.querySelector(".ts4").style.display='block';
-	 	    document.querySelector(".ts4").innerHTML='输入正确'
-	 	}
-	}
-
-	chkvalue4() {
-	 	var mm=/^[a-zA-Z0-9]{6,}$/;
-	 	var queren=document.querySelector(".queren").value;
-	 	
-	 	if(queren==""||mm.test(queren)==false){
-	 	   document.querySelector(".ts5").style.display='block';}
-	 	// }else{
-	 	//     document.querySelector(".ts5").style.display='block';
-	 	//     document.querySelector(".ts5").innerHTML='输入正确'
-	 	// }
-	}
+	 
 }
 
 export default Register

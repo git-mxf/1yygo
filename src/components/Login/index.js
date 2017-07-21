@@ -39,7 +39,7 @@ class Login extends Component {
 			}).then((data)=>{
 				console.log(data);
 				if(data.code){
-					this.props.history.push('/cart');
+					this.props.history.push('/mycloud');
 				}else{
 					alert("请检查")
 				}
@@ -54,9 +54,9 @@ class Login extends Component {
 			<div id="login">
 
 				<div id="loginHeader">
-				<div className="back"><i className="iconfont icon-zuo backzuo"></i></div>
+				<NavLink to="/mycloud"><div className="back"><i className="iconfont icon-zuo backzuo"></i></div></NavLink>
 					<div className="denglu">登录</div>
-			 		<div className="homepage"><i className="iconfont icon-shouye homgsy"></i></div>
+					<NavLink to="/cloudshop"><div className="homepage"><i className="iconfont icon-shouye homgsy"></i></div></NavLink>
 				</div>
 
 				<div className="datu"></div>
