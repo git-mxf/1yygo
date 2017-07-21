@@ -1,6 +1,6 @@
 import React,{Component} from "react";
 import "./index.scss";
-import "./xian";
+import jsonp from "./jsonp.js";
 
 
 
@@ -8,19 +8,33 @@ class New extends Component {
 	constructor(props) {
 		super(props);
 		this.state={
-			currentIndex: 0
+			currentIndex: 0,
+			looplist:[]
+			
 		}
 	}
+	componentDidMount() {
+		jsonp(res=>{
+			console.log(res.listItems);
+			this.setState({
+				looplist:res.listItems
+			})
+		})
+	}
+	
  
 
 	render(){
 		return (
-			<div id="New">
-				<div className="ljp_all" id="dianji">
+			<div id="New" >
+			<header>
+			<div></div>
+			</header>
+				<div className="ljp_all" onClick={this.dianji.bind(this)}>
 					<span>全部分类</span>
 					<i className="ljp_jiao"></i>
 					<div className="ljp_two" id="two">
-						<ul onClick={this.handle.bind(this)}>
+						<ul onClick={this.handler.bind(this)}>
 							<li data-list="0" 
 							className={this.state.currentIndex=='0'?'active':''}>
 								全部分类
@@ -72,36 +86,64 @@ class New extends Component {
 					
 					
 					<div className="ljp_details">
-						<dl>
-						<dt>
-							
-						</dt>
-						<dd>(第85142云) 苹果（Apple）iPhone 6s Plus 32G版 4G手机</dd>
-						<dd><span>价值：￥</span><em>7130.00</em></dd>
-						<dd>揭晓倒计时：</dd>
-						<p>
-							<em></em>
-							<span>:</span>
-							<em></em>
-							<span>:</span>
-							<em></em>
-						</p>
-						</dl>
+						{
+
+								this.state.looplist.map((item,index)=>
+							<dl onClick={()=>{
+										this.props.history.push(`/detail/123`);
+									}} key={item.goodsID}>
+								<dt>
+								<img src={(function(){
+									var img = item.goodsPic;
+									return 'https://img.1yyg.net/GoodsPic/pic-200-200/' + img;
+								})()} />
+								</dt>
+
+								<dd>{item.goodsSName}</dd>
+								<dd><span>价值：￥</span><em>{item.codePrice}</em></dd>
+								<dd>揭晓倒计时：</dd>
+								<p id="timer" className="otime"></p>
+							</dl>
+							)
+						}
 					</div>
 			</div>
 			)
 	}
-	handle(ev){
+	handler(ev){
 		console.log(ev.target.dataset.list)
 		this.setState({
 			currentIndex : ev.target.dataset.list
 		})
 	}
+	dianji(){
+		if(two.style.display=='none'){ // == 判断div.display是否为显示
+                    two.style.display='block'; //= 赋值也可了解成改变
+                }
+                else{
+                    two.style.display='none';
+                }
+	}
+	
 }
+var interval = 1000; 
+function ShowCountDown(year,month,day,divname) 
+{ 
+var now = new Date(); 
+var endDate = new Date(year, month-1, day); 
+var leftTime=endDate.getTime()-now.getTime(); 
+var leftsecond = parseInt(leftTime/1000); 
+//var day1=parseInt(leftsecond/(24*60*60*6)); 
+var day1=Math.floor(leftsecond/(60*60*24)); 
+var hour=Math.floor((leftsecond-day1*24*60*60)/3600); 
+var minute=Math.floor((leftsecond-day1*24*60*60-hour*3600)/60); 
+var second=Math.floor(leftsecond-day1*24*60*60-hour*3600-minute*60); 
+var cc = document.getElementById(divname); 
+	cc.innerHTML = '<em>'+hour+'</em>'+'<span>'+':'+'</span>'+'<em>'+minute+'</em>'+'<span>'+':'+'</span>'+'<em>'+second+'</em>'; 
+} 
+window.setInterval(function(){ShowCountDown('2017','02','07','timer');}, interval);
 
-/*var All=document.getElementsByClassName('ljp_all');
-All.onclick = function(){
-	All.style.display="block";
-}*/
+
+ 
 
 export default New

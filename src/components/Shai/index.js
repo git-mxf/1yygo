@@ -1,21 +1,33 @@
 import React,{Component} from "react";
-import "./index.scss"
-import "./xian";
+import "./index.scss";
+import jsonp from "./jsonp.js";
 
 class Shai extends Component {
 	constructor(props) {
 		super(props);
 		this.state={
-			currentIndex: 0
+			currentIndex: 0,
+			looplist:[]
 		}
 		
+	}
+	componentDidMount() {
+		jsonp(res=>{
+			console.log(res.listItems);
+			this.setState({
+				looplist:res.listItems
+			})
+		})
 	}
 
 	render(){
 		return (
 			<div id="shai">
+				<header>
+					<div></div>
+				</header>
 				<div className="ljp_all">
-				<ul onClick={this.handle.bind(this)}>
+				<ul onClick={this.handlee.bind(this)}>
 					<li data-list="11" 
 							className={this.state.currentIndex=='0'?'active1':''}>
 							最新
@@ -27,10 +39,10 @@ class Shai extends Component {
 					<li data-list="14" 
 							className={this.state.currentIndex=='0'?'active1':''}>人气</li>
 				</ul>
-					<span id="dianji">全部分类</span>
+					<span onClick={this.dianji.bind(this)}>全部分类</span>
 					<i className="ljp_jiao"></i>
 					<div className="ljp_two" id="two">
-						<ul onClick={this.handle.bind(this)}>
+						<ul onClick={this.handlee.bind(this)}>
 							<li data-list="0" 
 							className={this.state.currentIndex=='0'?'active':''}>
 								全部分类
@@ -78,37 +90,69 @@ class Shai extends Component {
 						</ul>
 					</div>
 				</div>
-				<div className="ping">
-					<div className="name">
-					<a href="#">YG颖宝遛着林狗去取车</a>
-					<span>昨天 17:59</span>
-					</div>
-					<div className="wenzi">
-					收到空调啦！好吧。运气挺好的。好大好重的移动空调。
-					5块钱带来的好运。家里刚好缺一台。满足了。感谢一元云购。
-					时不时的给我惊喜。坚信自己下一次可以中个55寸大电视。
-					哈。祝云购越做越好。我也会一直支持，一直中大奖。谢谢
-					</div>
-					<div className="tu">
-					<ul>
-					<li></li>
-					<li></li>
-					<li></li>
-					</ul>
-					</div>
-					<div className="zan">
-					  
-					</div>
-					<div className="tiao"></div>
-				</div>
+				{
+					this.state.looplist.map((item,index)=>
+						<div className="ping" onClick={()=>{
+									this.props.history.push(`/detail/123`);
+								}} key={item.goodsID}>
+						
+							<div className="name">
+								<a href="#">{item.userName}</a>
+								<span>{item.postTime}</span>
+							</div>
+							<div className="wenzi">
+								{item.postTitle}
+							</div>
+							<div className="tu">
+								<ul>
+									<li>
+									<img src={(function(){
+									var img = item.postAllPic;
+									return 'https://img.1yyg.net/userpost/small/' + img;
+								})()} />
+									</li>
+									<li>
+									<img src={(function(){
+									var img = item.postAllPic.split(",",3)[1];
+									return 'https://img.1yyg.net/userpost/small/' + img;
+								})()} />
+									</li>
+									<li>
+									<img src={(function(){
+									var img = item.postAllPic.split(",",3)[2];
+									return 'https://img.1yyg.net/userpost/small/' + img;
+								})()} />
+									</li>
+								</ul>
+							</div>
+							<div className="clear"></div>
+							<div className="xiazi">
+							  {item.postContent}
+							</div>
+							<div className="zan">
+							<span>{item.postHits}</span>
+							</div>
+							
+						</div>
+						)
+				}
+			
 			</div>
 			)
 	}
-	handle(ev){
+	handlee(ev){
 		console.log(ev.target.dataset.list)
 		this.setState({
 			currentIndex : ev.target.dataset.list
 		})
+	}
+	dianji(){
+		if(two.style.display=='none'){ // == 判断div.display是否为显示
+                    two.style.display='block'; //= 赋值也可了解成改变
+                }
+                else{
+                    two.style.display='none';
+                }
 	}
 }
 
