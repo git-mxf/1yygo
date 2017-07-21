@@ -23,6 +23,7 @@ import Newshop from "./components/Newshop/index.js"
 import Value from "./components/Value/index.js"
 import Wangyin from "./components/Wangyin/index.js"
 import Kachong from "./components/Kachong/index.js"
+import MyCloudChild from "./components/MyCloudChild/index.js"
 
  
 import {
@@ -72,6 +73,7 @@ ReactDOM.render(
 						<Route path="/Cart" component={Cart} />
 						<Route path="/Cartin" component={Cartin} />
 						<Route path="/MyCloud" component={MyCloud} />
+						<Route path="/MyCloudChild" component={MyCloudChild} />
 						<Route path="/Goodslist" component={Goodslist} />
 						
 						<Route path="/Xiangou" component={Xiangou} />

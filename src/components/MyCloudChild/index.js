@@ -13,7 +13,26 @@ class MyCloud extends Component {
 
 			<div id="MyCloud">
 				<header><div></div></header>
-				
+				<div className="head">
+					<img src="../src/assets/img/head.jpg" className="userface"/>
+					<div className="news">
+						<p className="person">USER.1016978536 <span className="number">(ID:1016978536)</span ></p>
+						<div className="person-small"><span className="star"></span> 云购小将</div>
+					</div>
+					<div className="set"></div>
+				</div>
+				<div className="top-up">
+					<div className="fortune">
+					<a href="javascript:;"><span className="money">20</span><span className="usable">可用福分</span></a>
+					</div>
+					<div className="rental">
+					<a href="javascript:;"><span className="money">￥0.00</span><span className="usable">账户总额</span></a>
+						
+					</div>
+					<div className="pay">
+						<a href="javascript:;"className="gopay" >去充值</a>
+					</div>
+				</div>
 				
 				<div className="myrecord">
 				<a href="javascript:;" className="lists"><span className="jilu"></span>我的云购记录<span className="you" ></span></a>
