@@ -1,5 +1,6 @@
 import React,{Component} from "react";
-import "./index.scss"
+import "./index.scss";
+import "../../assets/font/iconfont.css";
 
 
 class Goodslist extends Component {
@@ -14,93 +15,63 @@ class Goodslist extends Component {
 	render(){
 		return (
 			<div id="Goodslist">
-			<div id="divSearch">
-				<div className="box">
-
+				<div id="goodsDiv">
+					<div className="back"><i className="iconfont icon-zuo backzuo"></i></div>
+					<div className="denglu">商品列表</div>
+					<div className="homepage"><i className="iconfont icon-shouye homgsy"></i></div>
 				</div>
+				<div className="searchDiv">
+					<div className="goodsInput">
+					<div className="search"><i className="iconfont icon-fangdajing"></i></div>
+					<input type="text" className="searchInput" placeholder="输入“汽车”试试"/>
+				</div>
+				</div>
+				<div className="all-list-wrapper">
+					<div className="speciesList">
+						<ul className="spaciesName">
+							<li className="liList">全部商品</li>
+							<li className="liList">手机数码</li>
+							<li className="liList">电脑办公</li>
+							<li className="liList">家用电器</li>
+							<li className="liList">钟表首饰</li>
+							<li className="liList">食品饮料</li>
+							<li className="liList">化妆个护</li>
+							<li className="liList">运动户外</li>
+							<li className="liList">家居家纺</li>
+							<li className="liList">礼品箱包</li>
+							<li className="liList">母婴</li>
+							<li className="liList">汽车</li>
+							<li className="liList">其他商品</li>
+							<li className="liList">限购专区</li>
+						</ul>
+					</div>
+					<div className="showList">
+						<div className="good-menu">
+							<ul className="good-menu-list">
+								<li className="current">
+									<a href="javascript:;" className="aName">即将揭晓</a>
+								</li>
+								<li className="current">
+									<a href="javascript:;" className="aName">人气</a>
+								</li>
+								<li className="current">
+									<a href="javascript:;" className="aName">最新</a>
+								</li>
+								<li className="current">
+									<a href="javascript:;" className="aName">价值</a>
+									<span className="i-wrap">
+										<i className="up"></i>
+										<i className="down"></i>
+									</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				
 			</div>
-				<div className="header">
-					<ul onClick = {this.handle.bind(this)}>
-						<li data-list="0" className={this.state.currentIndex=='0'?'active':''}>
-
-							全部商品
-						</li>
-						<li data-list="1" className={this.state.currentIndex=='1'?'active':''}>
-
-							手机数码
-						</li>
-						<li data-list="2" className={this.state.currentIndex=='2'?'active':''}>
-
-							电脑办公
-						</li>
-						<li data-list="3" className={this.state.currentIndex=='3'?'active':''}>
-
-							家用电器
-						</li>
-						<li data-list="4" className={this.state.currentIndex=='4'?'active':''}>
-
-							钟表首饰
-						</li>
-						<li data-list="5" className={this.state.currentIndex=='5'?'active':''}>
-
-							食品饮料
-						</li>
-						<li data-list="6" className={this.state.currentIndex=='6'?'active':''}>
-
-							化妆个护
-						</li>
-						<li data-list="7" className={this.state.currentIndex=='7'?'active':''}>
-
-							运动户外
-						</li>
-						<li data-list="8" className={this.state.currentIndex=='8'?'active':''}>
-
-							家具家纺
-						</li>
-						<li data-list="9" className={this.state.currentIndex=='9'?'active':''}>
-
-							礼品箱包
-						</li>
-						<li data-list="10" className={this.state.currentIndex=='10'?'active':''}>
-
-							母婴
-						</li>
-						<li data-list="11" className={this.state.currentIndex=='11'?'active':''}>
-
-							汽车
-						</li>
-						<li data-list="12" className={this.state.currentIndex=='12'?'active':''}>
-
-							其它商品
-						</li>
-						<li data-list="13" className={this.state.currentIndex=='13'?'active':''}>
-
-							限购专区
-						</li>
-					</ul>
-				</div>
-				<div className="content">
-					<ul className="content-top">
-						<li className="content-topin">即将揭晓</li>
-						<li className="content-topin">人气</li>
-						<li className="content-topin">最新</li>
-						<li className="content-topin">价值</li>
-					</ul>
-					<ul>
-						<li id="aaaaa">
-							<span className="gList_l">
-									<img src="./assets/imgGao/Z.jpg" />
-							</span>
-							<div className="gList_r">
-									<h3 className="gray6">(第1586云)悠骑(JQ)新</h3>
-									<em className="gray9">价值:￥2499.00</em>
-
-							</div>
-						</li>
-					</ul>
-				</div>
-			</div>
-			)
+		)
 	}
 
 	handle(ev){

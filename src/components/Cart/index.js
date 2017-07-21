@@ -1,7 +1,6 @@
 import React,{Component} from "react";
 import "./index.scss";
-import "../../assets/font/iconfont.css"
-
+import "../../assets/font/iconfont.css";
 
 class Cart extends Component {
 	constructor(props) {
@@ -11,15 +10,23 @@ class Cart extends Component {
 
 	render(){
 		return (
-			<div id="all">
+			<div id="cart">
+				<header><div></div></header>
 				<ul className="shopping">
 					<li className="goods1">
 						<a href="javascript:;" className="picture"><img src="../src/assets/img/buy1.jpg"  className="pingan"/></a>
 						<div className="presentation">
 							<a href="javascript" className="update">(第1276云)平安银行 平安祥云福禄金条 Au9999 100g</a>
-							<span>剩余29860人次</span>
-							<div></div>
-							<a href="javascripe:;"></a>
+							<span className="surplus">剩余8171人次</span>
+							<div className="num-opt">
+								<div className="magnitude">
+									<div className="jian"><i className="iconfont icon-jianhao"></i></div>
+									<div className="yi">1</div>
+									<div className="jia"><i className="iconfont icon-jiahao"></i></div>
+								</div>
+								<a href="javascript;:" className="rubbish"><i className="iconfont icon-huishouzhan"></i></a>
+							</div>
+							
 						</div>
 
 					</li>
