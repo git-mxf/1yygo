@@ -12,9 +12,7 @@ import {
 class CloudShop extends Component {
 	constructor(props) {
 		super(props);
-		this.state={
-			currentIndex: 0
-		}
+		
 	}
 
 	render(){
@@ -76,11 +74,11 @@ class CloudShop extends Component {
 						<li><NavLink to="/CloudShop/newshop" activeClassName='select' >最新</NavLink></li>
 						<li><NavLink to="/CloudShop/value" activeClassName='select' >价值</NavLink></li>
 					</ul>
-					<div className="right" onClick={()=>{
-						this.props.history.push(`/Search`);
-					}}>
+					<div className="right">
+					<NavLink to="/Search">
 						<i className="iconfont icon-fangdajing"></i>
 						<span>搜索</span>
+					</NavLink>
 					</div>	
 				</div>
 				{

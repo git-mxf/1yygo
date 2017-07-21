@@ -1,6 +1,8 @@
 import React,{Component} from "react";
 import "./index.scss";
 import img from "../../assets/img/20170302175316313.jpg";
+import jsonp from "./jsonp.js";
+
 import {
 	NavLink
 } from "react-router-dom"
@@ -9,6 +11,10 @@ import {
 class Detail extends Component {
 	constructor(props) {
 		super(props);
+		
+	}
+
+	componentDidMount() {
 		
 	}
 
@@ -52,6 +58,12 @@ class Detail extends Component {
 					<a href="#">参与记录<s className="fr"></s></a>
 					<a href="#">图文详情<span>(建议WIFI下使用)</span><s className="fr"></s></a>
 					<a href="#">商品晒单<s className="fr"></s></a>
+				</div>
+
+				<div className="footer">
+					<a href="#">立即一元购</a>
+					<a href="#">加入购物车</a>
+					<i></i>
 				</div>
 			</div>
 			)

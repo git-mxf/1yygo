@@ -1,7 +1,9 @@
+
 import React,{Component} from "react";
 import "./index.scss";
 import "../../assets/font/iconfont.css";
 import jsonp from "./jsonp.js";
+
 
 
 class Goodslist extends Component {
@@ -56,6 +58,7 @@ class Goodslist extends Component {
 								<li className="liList">其他商品</li>
 								<li className="liList">限购专区</li>
 								<li className="liList"></li>
+
 							</ul>
 						</div>
 						<div className="showList">

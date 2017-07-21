@@ -1,0 +1,89 @@
+
+#logotDiv{
+		width:100%;
+		height:44px;
+		background:#ff6600;
+
+		.back{
+			width:15%;
+			float:left;
+			height:44px;
+			text-align: center;
+			line-height:44px;
+
+			.backzuo{
+				color:#fff;
+				font-size:26px;
+			}
+
+		}
+
+		.denglu{
+			width:70%;
+			float:left;
+			height:44px;
+			text-align: center;
+			line-height:44px;
+			color:#fff;
+			font-size:16px;
+		}
+
+		.homepage{
+			width:15%;
+			float:left;
+			height:44px;
+			text-align: center;
+			line-height:44px;
+
+			.homgsy{
+				color:#fff;
+				font-size:24px;
+			}
+		}
+	}
+.personalData{
+	width:100%;
+	height:45px;
+	background:#fff;
+	display:block;
+	color:#666;
+	font-size:16px;
+	line-height:45px;
+	padding-left:10px;
+}
+
+.securitySettings{
+	margin-top:2px;
+	width:100%;
+	height:45px;
+	background:#fff;
+	display:block;
+	font-size:16px;
+	line-height:45px;
+	padding-left:10px;
+}
+
+.shareMoney{
+	margin-top:10px;
+	width:100%;
+	height:45px;
+	background:#fff;
+	display:block;
+	font-size:16px;
+	line-height:45px;
+	padding-left:10px;
+}
+
+.outLogin{
+	width:90%;
+	height:45px;
+	display:block;
+	background:#f60;
+	border-radius:5px;
+	margin:0 auto;
+	margin-top:20px;
+	line-height:45px;
+	color:#fff;
+	text-align:center;
+	font-size:18px;
+}
