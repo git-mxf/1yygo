@@ -5,7 +5,7 @@ import {
 } from "react-router-dom"
 
 
-class MyCloud extends Component {
+class MyCloudChild extends Component {
 	constructor(props) {
 		super(props);
 		
@@ -17,25 +17,9 @@ class MyCloud extends Component {
 			<div id="MyCloud">
 				<header><div></div></header>
 
-				<div className="head">
-					<img src="../src/assets/img/head.jpg" className="userface"/>
-					<div className="news">
-						<p className="person">USER.1016978536 <span className="number">(ID:1016978536)</span ></p>
-						<div className="person-small"><span className="star"></span> 云购小将</div>
-					</div>
-					<NavLink to="/logout"><div className="set"></div></NavLink>
-				</div>
-				<div className="top-up">
-					<div className="fortune">
-					<a href="javascript:;"><span className="money">20</span><span className="usable">可用福分</span></a>
-					</div>
-					<div className="rental">
-					<a href="javascript:;"><span className="money">￥0.00</span><span className="usable">账户总额</span></a>
-						
-					</div>
-					<div className="pay">
-						<a href="javascript:;"className="gopay" >去充值</a>
-					</div>
+				<div className="shangbian">
+				<p>^_^ 欢迎来到1元云购</p>
+				<NavLink to="/login"><div className="log">登录</div></NavLink>
 				</div>
 
 				
@@ -54,4 +38,4 @@ class MyCloud extends Component {
 	}
 }
 
-export default MyCloud
+export default MyCloudChild
