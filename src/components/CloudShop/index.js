@@ -5,24 +5,14 @@ import images1 from "../../assets/img/20170609151005929.jpg"
 import images2 from "../../assets/img/20170605084728556.jpg"
 import images3 from "../../assets/img/20170629175309381.jpg"
 import "../../assets/font/iconfont.css"
-import img from "../../assets/img/20150703172947616.jpg"
-import axios from "axios";
+
 import {
 	NavLink
 } from "react-router-dom"
 class CloudShop extends Component {
 	constructor(props) {
 		super(props);
-		this.state={
-			currentIndex: 0,
-			looplist:[]
-		}
-	}
-
-	componentDidMount() {
-		axios.get("/api/home").then(res=>{
-			console.log(res.data);
-		})
+		
 	}
 
 	render(){
@@ -78,51 +68,29 @@ class CloudShop extends Component {
 				</section>
 				<div className="line"></div>
 				<div className="tab">
-					<ul className="left" onClick={this.handle.bind(this)}>
-						<li data-list="0" 
-						className={this.state.currentIndex=='0'?'active':''} >即将揭晓</li>
-						<li data-list='1' 
-						className={this.state.currentIndex=='1'?'active':''}>人气</li>
-						<li data-list='2'
-							className={this.state.currentIndex=='2'?'active':''}>最新</li>
-						<li data-list='3'
-							className={this.state.currentIndex=='3'?'active':''}>价值</li>
+					<ul className="left">
+						<li><NavLink to="/CloudShop/jijiang" activeClassName='select' >即将揭晓</NavLink></li>
+						<li><NavLink to="/CloudShop/Person" activeClassName='select' >人气</NavLink></li>
+						<li><NavLink to="/CloudShop/newshop" activeClassName='select' >最新</NavLink></li>
+						<li><NavLink to="/CloudShop/value" activeClassName='select' >价值</NavLink></li>
 					</ul>
-					<div className="right" onClick={()=>{
-						this.props.history.push(`/Search`);
-					}}>
+					<div className="right">
+					<NavLink to="/Search">
 						<i className="iconfont icon-fangdajing"></i>
 						<span>搜索</span>
+					</NavLink>
 					</div>	
 				</div>
-				<div className="product">
-					<ul>
-						<li onClick={()=>{
-									this.props.history.push(`/detail/123`);
-								}}>
-							<img src={img} />
-							<p className="duc">(第<em>1234</em>云)蓝月亮 亮白增艳洗衣液（自然清香）3kg/瓶</p>
-							<span className="price">价值：￥50.00</span>
-							<p className="u-progress">
-								<span className="pgbar"></span>
-							</p>
-							<div className="bot">
-								<a className="left" href="javascipt:;">立即一元云购</a>
-								<a className="right" href="javascipt:;"><i></i></a>
-							</div>
-						</li>
-					</ul>
-				</div>
+				{
+					this.props.children
+				}
+				
 			</div>
 			)
 	}
 
-	handle(ev){
-		console.log(ev.target.dataset.list)
-		this.setState({
-			currentIndex : ev.target.dataset.list
-		})
-	}
+		
+	
 	
 }
 

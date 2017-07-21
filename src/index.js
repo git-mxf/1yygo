@@ -17,6 +17,13 @@ import Register from "./components/Register/index.js";
 import Search from "./components/Search/index.js"
 import Logout from "./components/Logout/index.js"
 import Cartin from "./components/Cartin/index.js"
+import Jijiang from "./components/Jijiang/index.js"
+import Person from "./components/Person/index.js"
+import Newshop from "./components/Newshop/index.js"
+import Value from "./components/Value/index.js"
+import Wangyin from "./components/Wangyin/index.js"
+import Kachong from "./components/Kachong/index.js"
+
  
 import {
 	HashRouter as Router,
@@ -35,20 +42,42 @@ ReactDOM.render(
 			<Route path="/Register" component={Register} />
 			<Route path="/Logout" component={Logout} />
 			<Route path="/Search" component={Search} />
+			
+			<Route path="/Chongzhi" render={()=>
+				<Chongzhi>
+					<Switch>
+						<Route path="/Chongzhi/Wangyin" component={Wangyin} />
+						<Route path="/Chongzhi/Kachong" component={Kachong} />
+						<Redirect from="/Chongzhi" to="/Chongzhi/Wangyin" />
+					</Switch>
+				</Chongzhi>
+			} />
 			<Route path="/" render={()=>
 					<App>
-						<Route path="/CloudShop" component={CloudShop} />
+						<Route path="/CloudShop" render={()=>
+							<CloudShop>
+								<Switch>
+									<Route path='/CloudShop/jijiang' component={Jijiang} />
+									<Route path='/CloudShop/person' component={Person} />
+									<Route path='/CloudShop/newshop' component={Newshop} />
+									<Route path='/CloudShop/value' component={Value} />
+									<Redirect from="/CloudShop" to="/CloudShop/jijiang" />
+								</Switch>
+							</CloudShop>
+						} />
+						
 						<Route path="/New" component={New} />
 						<Route path="/Shai" component={Shai} />
 						<Route path="/Cart" component={Cart} />
 						<Route path="/Cartin" component={Cartin} />
 						<Route path="/MyCloud" component={MyCloud} />
 						<Route path="/Goodslist" component={Goodslist} />
-						<Route path="/Chongzhi" component={Chongzhi} />
+						
 						<Route path="/Xiangou" component={Xiangou} />
 						<Route path="/Xiazai" component={Xiazai} />
 						<Route path="/Detail/:myID" component={Detail} />
-						<Redirect from="/" to="/CloudShop" />
+						<Redirect from="/Detail" to="/Detail/:myID" />
+						<Redirect from="/" to="/CloudShop/jijiang" />
 					</App>
 				}/>
 
