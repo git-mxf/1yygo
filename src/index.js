@@ -42,7 +42,8 @@ ReactDOM.render(
 			<Route path="/Register" component={Register} />
 			<Route path="/Logout" component={Logout} />
 			<Route path="/Search" component={Search} />
-			
+			<Route path="/Detail/:myID" component={Detail} />
+			<Redirect from="/Detail" to="/Detail/:myID" />
 			<Route path="/Chongzhi" render={()=>
 				<Chongzhi>
 					<Switch>
@@ -75,8 +76,7 @@ ReactDOM.render(
 						
 						<Route path="/Xiangou" component={Xiangou} />
 						<Route path="/Xiazai" component={Xiazai} />
-						<Route path="/Detail/:myID" component={Detail} />
-						<Redirect from="/Detail" to="/Detail/:myID" />
+
 						<Redirect from="/" to="/CloudShop/jijiang" />
 					</App>
 				}/>
