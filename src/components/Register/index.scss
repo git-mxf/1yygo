@@ -1,0 +1,229 @@
+#registerPage{
+	width:100%;
+	height:100%;
+	background:#fafafa;
+
+	#register{
+		background:#ff6600;
+		width: 100%;
+		height:44px;
+
+		.regZuo{
+			width:15%;
+			float:left;
+			height:44px;
+			text-align: center;
+			line-height:44px;
+
+			.backzuos{
+				color:#fff;
+				font-size:26px;
+			}
+
+		}
+
+		.zhuce{
+			width:70%;
+			float:left;
+			height:44px;
+			text-align: center;
+			line-height:44px;
+			color:#fff;
+			font-size:16px;
+		}
+
+		.regHome{
+			width:15%;
+			float:left;
+			height:44px;
+			text-align: center;
+			line-height:44px;
+
+			.homgsys{
+				color:#fff;
+				font-size:24px;
+			}
+		}
+	}
+
+	.registerDiv{
+		padding: 15px;
+	    background: #fafafa;
+	    text-align: center;
+	    
+	    .goInput{
+	    	width:100%;
+	    	border:1px solid #dedede;
+	    	color: #666;
+		    background: #fff;
+		    border-radius: 5px;
+    		font-size: 16px;
+    		text-align: left;
+    		line-height:45px;
+    		height:45px;
+    		color:#c7c7c7;
+    		::-webkit-input-placeholder { /* Chrome */
+  			color:#c7c7c7;}
+
+  			.telephones{
+  				border:none;
+  				margin-left:15px;
+  				font-size:15px;
+  			}
+	    }
+
+	    .next{
+	    	width:100%;
+	    	background:#ff6600;
+	    	color:#fff;
+		    
+		    border-radius:5px;
+    		font-size: 16px;
+    		text-align: center;
+    		line-height:45px;
+    		height:45px;
+    		margin-top:20px;
+    		
+	    }
+
+	    .agreement{
+	    	width: 100%;
+		    margin-bottom: 10px;
+		    position: relative;
+		    font-size: 14px;
+		    color: #999;
+		    text-align: left;
+		    line-height: 22px;
+		    margin-top:14px;
+
+		    .choose{
+		    	float: left;
+			    width: 20px;
+			    height: 22px;
+			    margin-right: 5px;
+			    position: relative;
+		    	background:url("../../assets/img/sets.png") no-repeat 0px -39px;
+	    		background-size: 20px auto;
+		    }
+
+		    .xieyi{
+		    	color:#51aaff;
+		    	margin-left:6px;
+		    }
+	    }
+	}
+}#registerPage{
+	width:100%;
+	height:100%;
+	background:#fafafa;
+
+	#register{
+		background:#ff6600;
+		width: 100%;
+		height:44px;
+
+		.regZuo{
+			width:15%;
+			float:left;
+			height:44px;
+			text-align: center;
+			line-height:44px;
+
+			.backzuos{
+				color:#fff;
+				font-size:26px;
+			}
+
+		}
+
+		.zhuce{
+			width:70%;
+			float:left;
+			height:44px;
+			text-align: center;
+			line-height:44px;
+			color:#fff;
+			font-size:16px;
+		}
+
+		.regHome{
+			width:15%;
+			float:left;
+			height:44px;
+			text-align: center;
+			line-height:44px;
+
+			.homgsys{
+				color:#fff;
+				font-size:24px;
+			}
+		}
+	}
+
+	.registerDiv{
+		padding: 15px;
+	    background: #fafafa;
+	    text-align: center;
+	    
+	    .goInput{
+	    	width:100%;
+	    	border:1px solid #dedede;
+	    	color: #666;
+		    background: #fff;
+		    border-radius: 5px;
+    		font-size: 16px;
+    		text-align: left;
+    		line-height:45px;
+    		height:45px;
+    		color:#c7c7c7;
+    		::-webkit-input-placeholder { /* Chrome */
+  			color:#c7c7c7;}
+
+  			.telephones{
+  				border:none;
+  				margin-left:15px;
+  				font-size:15px;
+  			}
+	    }
+
+	    .next{
+	    	width:100%;
+	    	background:#ff6600;
+	    	color:#fff;
+		    display:block;
+		    border-radius:5px;
+    		font-size: 16px;
+    		text-align: center;
+    		line-height:45px;
+    		height:45px;
+    		margin-top:20px;
+    		
+	    }
+
+	    .agreement{
+	    	width: 100%;
+		    margin-bottom: 10px;
+		    position: relative;
+		    font-size: 14px;
+		    color: #999;
+		    text-align: left;
+		    line-height: 22px;
+		    margin-top:14px;
+
+		    .choose{
+		    	float: left;
+			    width: 20px;
+			    height: 22px;
+			    margin-right: 5px;
+			    position: relative;
+		    	background:url("../../assets/img/sets.png") no-repeat 0px -39px;
+	    		background-size: 20px auto;
+		    }
+
+		    .xieyi{
+		    	color:#51aaff;
+		    	margin-left:6px;
+		    }
+	    }
+	}
+}
