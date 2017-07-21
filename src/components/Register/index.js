@@ -48,87 +48,34 @@ class Register extends Component {
 
 	render(){
 		return (
-			// <div id="registerPage">
-			// 	<div id="register">
-			// 		<div className="regZuo"><i className="iconfont icon-zuo backzuos"></i></div>
-			// 		<div className="zhuce">注册</div>
-			// 		<div className="regHome"><i className="iconfont icon-shouye homgsys"></i></div>
-			// 	</div>
-			// 	<div className="registerDiv">
-			// 		<div className="goInput">
-			// 			<input type="text" placeholder="请输入您的手机号码" className="telephones"/>
-			// 		</div>
-			// 		<a href="javascript" className="next">下一步</a>
-			// 		<div className="agreement"><div className="choose"></div>我已阅读并同意<a href="javascript:;" className="xieyi">1元云购用户服务协议</a></div>
-			// 	</div>
-			// </div>
-			// 
-			// 
+		
 				<div id="regist">
+
+						<div id="registDiv">
+							<div className="backs"><i className="iconfont icon-zuo backzuo"></i></div>
+					 		<div className="zhuces">注册</div>
+							<div className="homepages"><i className="iconfont icon-shouye homgsy"></i></div>
+						</div>
+
 					<div className="all">
 
 						<div className="zho">
 							<div className="datu"></div>
 							<form>	
 								<div className="yi">
-									<label>手机号码
+									<label>
 									<input type="tel" ref="username" placeholder="请输入手机号码" maxLength="11" className="shouji" ref="username" onBlur={this.chkvalue.bind(this)}/>
 									</label>
 									<p className="ts1">请输入手机号码</p>
 								</div>
-								<div className="er">
-									<label>图形验证码
-									<input type="text" placeholder="请输入图形验证码" className="tuxing" onBlur={this.chkvalue1.bind(this)}/>
-									</label>
-									<p className="ts2">请输入图形验证码</p>
-								</div>
-								<div className="san">
-									<label>验证码
-									<input type="text" placeholder="请输入验证码"  className="yanzheng" onBlur={this.chkvalue2.bind(this)}/>
-									</label>
-									<p className="ts3">请输入验证码</p>
-								</div>
-								<div className="si">
-									<label>登录密码
-									<input type="password" ref="psw" placeholder="请输入登录密码" maxLength="11" className="denglu" onBlur={this.chkvalue3.bind(this)}/>
-									</label>
-									<p className="ts4">请输入登录密码</p>
-								</div>
-								<div className="wu">
-									<label>确认密码
-									<input type="password" placeholder="请确认登录密码" maxLength="11" className="queren" onBlur={this.chkvalue4.bind(this)}/>
-									</label>
-									<p className="ts5">请确认登录密码</p>
-								</div>
-								<div className="liu">
-									<label>邀请码
-									<input type="text" placeholder="请输入邀请码（选填）" className="yaoqing" />
-									</label>
-								</div>
-								<p className="yaoqiu">
-									*6个字符（字母、数字），区分大小写
-								</p>
-								<p className="zhijie">
-								已有账号，<NavLink to="/login" activeClassName="suiyi"><span>直接登录></span></NavLink>
-								</p>
+								
 								<div className="anniu">
-									<button onClick = {this.regist}>提交注册</button>
+									<button onClick = {this.regist}  className="nexts">下一步</button>
 								</div>
+
+								<div className="agreement"><div className="choose"></div>我已阅读并同意<a href="javascript:;" className="xieyi">1元云购用户服务协议</a></div>
 							</form>	
-							<div className="xieyi">
-								<span className="aa">
-								<NavLink to="/home" activeClassName="suiyi">注册代表同意</NavLink>
-								</span> 
-								<span className="ab">
-								<NavLink to="/home" activeClassName="suiyi">《房金所平台服务协议》</NavLink>
-								</span>、
-								<span className="ac">
-								<NavLink to="/home" activeClassName="suiyi">《新浪支付服务使用协议》</NavLink>
-								</span>、
-								<span className="ad">
-								<NavLink to="/home" activeClassName="suiyi">《上海华瑞银行资金存管三方协议》</NavLink>
-								</span>
-							</div>
+							
 					</div>
 				</div>
 			</div>
